@@ -1,0 +1,18 @@
+#挂载硬盘
+## 查看外接的硬盘
+ sudo fdisk -lu
+## 分区
+sudo parted /dev/vdb
+mklabel gpt
+ mkpart primary
+ext4
+根据大小输入起始和结束大小0，XXGB
+## 建立文件系统
+sudo mkfs /dev/vdb1
+## 挂载盘
+sudo mount /dev/vdb1 /data
+## 设置开机挂载
+etc/fstab 中添加下面的文字
+/dev/vdb1		/data	ext4	defaults	0	1
+## 设置权限
+sudo chmod 777 /data/bio
