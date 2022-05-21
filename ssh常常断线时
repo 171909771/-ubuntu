@@ -1,0 +1,6 @@
+```shell
+touch ~/.ssh/config
+chmod 600 ~/.ssh/config
+echo "ServerAliveInterval 60" >> ~/.ssh/config
+sudo /etc/init.d/ssh restart
+```
