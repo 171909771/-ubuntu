@@ -1,6 +1,8 @@
-```shell
-touch ~/.ssh/config
-chmod 600 ~/.ssh/config
-echo "ServerAliveInterval 60" >> ~/.ssh/config
-sudo /etc/init.d/ssh restart
-```
+
+## 修改PC中的
+C:\Users\Administrator\.ssh
+config 配置文件，并且没有后缀名。
+ServerAliveInterval 60
+ 
+## 修改linux
+这个报错一般都是配置参数问题引起的，查看您有设置ClientAliveInterval和ClientAliveCountMax 的值，重新更改了ClientAliveCountMax 的值由1变为了5，并且设置了MaxStartups 为2000
