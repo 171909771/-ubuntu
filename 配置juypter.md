@@ -27,8 +27,14 @@ c.ContentsManager.root_dir = '/home/chan87/biosoft/jupyter/root'
 c.NotebookApp.allow_origin = '*'
 ```
 # 打开端口，并切查看nohup.out的端口
-nohup jupyter notebook --ip 0.0.0.0 &
+nohup /home/chan87/miniconda3/bin/jupyter notebook --ip 0.0.0.0 &
 
 # 添加conda环境
 ## 添加conda环境到jupyter
 python -m ipykernel install --user --name velocyto --display-name "python velocyto"
+
+# 开启 nbextension 插件功能
+```shell
+pip install jupyter_contrib_nbextensions
+jupyter contrib nbextension install --user
+```
