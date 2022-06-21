@@ -6,8 +6,10 @@ pip install jupyter
 jupyter notebook --generate-config
 ## 确认转码的密码，并记录argon2:$argon2id$v=19$m=10240,t=10,p=8$CUdkf+2S+T8n3FuOsxejfA$tTNH9D587i5+FyGMzrrnDG9PhrCMf58TRCZg9KteZTo，这个是我的简约密码
 ### 打开python3
+```python
 from notebook.auth import passwd
 passwd()
+```
 ## 进入~/.jupyter，配置jupyter_notebook_config.py，输入以下内容
 ```linux
 # 允许root的管理员运行
